@@ -1,6 +1,7 @@
 export default {
     products : [
         {
+        _id: '1',
         name: "Air Max 90's",
         catagory: "Shoes",
         image: "/images/d1.jpg",
@@ -10,6 +11,7 @@ export default {
         numReviews: 10
     },
     {
+        _id: '2',
         name: "Air Max 90's",
         catagory: "Shoes",
         image: "/images/d1.jpg",
@@ -19,13 +21,14 @@ export default {
         numReviews: 10
     },
     {
+        _id: '3',
         name: "Air Max 90's",
         catagory: "Jewelry",
         image: "/images/d1.jpg",
         price: 87,
         brand: "Nike",
         rating: 3.5,
-        numReviews: 10
+        numReviews: 7
     },
 ]
 }
