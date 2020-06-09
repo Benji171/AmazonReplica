@@ -8,7 +8,8 @@ export default {
         price: 675,
         brand: "Nike",
         rating: 4.5,
-        numReviews: 10
+        numReviews: 10,
+        countInStock: 6,
     },
     {
         _id: '2',
@@ -18,17 +19,19 @@ export default {
         price: 180,
         brand: "Nike",
         rating: 2.5,
-        numReviews: 10
+        numReviews: 10,
+        countInStock: 7,
     },
     {
         _id: '3',
         name: "Air Max 90's",
         catagory: "Jewelry",
         image: "/images/d1.jpg",
-        price: 87,
+        price: 504,
         brand: "Nike",
         rating: 3.5,
-        numReviews: 7
+        numReviews: 7,
+        countInStock: 0,
     },
 ]
 }
