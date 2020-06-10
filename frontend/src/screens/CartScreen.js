@@ -57,11 +57,9 @@ function CartScreen (props) {
                             <div>
                                 Qty: 
                                 <select value={item.qty} onChange={(e) => dispatch(addToCart(item.product, e.target.value)) }>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
+                                {[...Array(item.countInStock).keys()].map(x =>
+                                    <option key={x + 1 } value={x + 1}>{x + 1}</option>
+                                )}
                                 </select>
                                 <button className="button" type="button" onClick={() => removeFromCartHandler(item.product)}>Delete</button>
                             </div>
@@ -80,7 +78,7 @@ function CartScreen (props) {
             <h3>
                 Subtotal ( {cartItems.reduce((a, c) => a + c.qty, 0)} items )
                 :
-                $ {cartItems.reduce((a,c) => a + c.price* c.qty, 0)}
+                $ {cartItems.reduce((a,c) => a + c.price * c.qty, 0)}
             </h3>
             <button onClick={checkoutHandler} className="button primary full-width" disabled={cartItems.length === 0}>Proceed To Checkout</button>
         </div>
