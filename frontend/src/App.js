@@ -3,10 +3,17 @@ import { useSelector } from 'react-redux';
 import {BrowserRouter, Route, Link} from 'react-router-dom'
 import './App.css';
 import HomeScreen from './screens/HomeScreen'
-import ProductScreen from './screens/ProductScreen'
+import ProductScreen from './screens/ProductScreen1'
 import CartScreen from './screens/CartScreen';
-import SignInScreen from './screens/SignInScreen';
+import SigninScreen from './screens/SignInScreen';
 import RegisterScreen from './screens/RegisterScreen';
+import ProductsScreen from './screens/ProductsScreen';
+import OrderScreen from './screens/OrderScreen';
+import ProfileScreen from './screens/ProfileScreen';
+import OrdersScreen from './screens/OrdersScreen';
+import PlaceOrderScreen from './screens/PlaceOrderScreen';
+import PaymentScreen from './screens/PaymentScreen';
+import ShippingScreen from './screens/ShippingScreen';
 
 function App() {
 
@@ -22,31 +29,37 @@ const { userInfo } = userSignin;
 
 
   return (
-  <BrowserRouter>
-
+    <BrowserRouter>
     <div className="grid-container">
-
-    <header className="header">
-
+      <header className="header">
         <div className="brand">
-            <button onClick={openMenu}>
-                &#9776;
-            </button>
-            <Link to="/">amazona</Link>
+          <button onClick={openMenu}>
+            &#9776;
+      </button>
+          <Link to="/" >amazona</Link>
         </div>
-
         <div className="header-links">
-            <a href="cart.html">Cart</a>
-            {
-                userInfo ? <Link to="/profile">{userInfo.name}</Link>:
-                <Link to="/signin">SignIn</Link>
-            }
-
+          <a href="cart.html">Cart</a>
+          {
+            userInfo ? <Link className="header-link" to="/profile">{userInfo.name}</Link> :
+              <Link className="header-link" to="/signin">Sign In</Link>
+          }
+          {userInfo && userInfo.isAdmin && (
+            <div className="dropdown">
+              <a href="#"  >Admin</a>
+              <ul className="dropdown-content">
+                <li>
+                  <Link to="/orders">Orders</Link>
+                  <Link to="/products">Products</Link>
+                </li>
+              </ul>
+            </div>
+          )}
         </div>
-    </header>
+      </header>
 
     <aside className="sidebar">
-        <h3>Shopping Catigories</h3>
+        <h3 className="text-center">Shopping Catigories</h3>
         <button className="sidebar-close-button" onClick={closeMenu}>x</button>
         <ul>
             <li>
@@ -59,12 +72,21 @@ const { userInfo } = userSignin;
     </aside>
 
     <main className="main">
-        <div className="content">
-            <Route path="/products/:id" component={ProductScreen} />
-            <Route path="/signin" component={SignInScreen} />
+    <div className="content">
+            <Route path="/orders" component={OrdersScreen} />
+            <Route path="/profile" component={ProfileScreen} />
+            <Route path="/order/:id" component={OrderScreen} />
+            <Route path="/products" component={ProductsScreen} />
+            <Route path="/shipping" component={ShippingScreen} />
+            <Route path="/payment" component={PaymentScreen} />
+            <Route path="/placeorder" component={PlaceOrderScreen} />
+            <Route path="/signin" component={SigninScreen} />
             <Route path="/register" component={RegisterScreen} />
+            <Route path="/product/:id" component={ProductScreen} />
             <Route path="/cart/:id?" component={CartScreen} />
+            <Route path="/category/:id" component={HomeScreen} />
             <Route path="/" exact={true} component={HomeScreen} />
+
 
            
         </div>

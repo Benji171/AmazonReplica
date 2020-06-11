@@ -22,7 +22,7 @@ function RegisterScreen (props) {
 
     const redirect = props.location.search ? props.location.search.split("=")[1] : '/';
 
-    useEffect((props) => {
+    useEffect(() => {
         if(userInfo){
             props.history.push(redirect)
         }
