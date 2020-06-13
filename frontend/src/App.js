@@ -39,7 +39,7 @@ const { userInfo } = userSignin;
           <Link to="/" >amazona</Link>
         </div>
         <div className="header-links">
-          <a href="cart.html">Cart</a>
+          <a href="/cart">Cart</a>
           {
             userInfo ? <Link className="header-link" to="/profile">{userInfo.name}</Link> :
               <Link className="header-link" to="/signin">Sign In</Link>
@@ -63,10 +63,10 @@ const { userInfo } = userSignin;
         <button className="sidebar-close-button" onClick={closeMenu}>x</button>
         <ul>
             <li>
-                <a href="index.html">Shoes</a>
+                <a href="/category/shoes">Shoes</a>
             </li>
             <li>
-                <a href="index.html">Jewelry</a>
+                <a href="/category/jewelry">Jewelry</a>
             </li>
         </ul>
     </aside>

@@ -83,6 +83,9 @@ a:hover {
   justify-content: space-between;
   height: 100%;
 }
+.name-link {
+  color: #000000;
+}
 .product-name{
   font-size: 2rem;
   font-weight: bold;
@@ -101,6 +104,11 @@ a:hover {
 }
 .product-rating {
   margin-bottom: 1rem;
+}
+.category-header{
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 3rem;
 }
 /* SideBar */
 
@@ -163,7 +171,6 @@ a:hover {
 }
 .details-info{
   flex: 1 1 5rem;
-  background-color: #f3900f;
   min-width: 25rem;
   margin-right: 20px;
 }

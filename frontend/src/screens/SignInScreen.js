@@ -33,7 +33,7 @@ function SignInScreen (props) {
     }
 
     return  <div className="form">
-               <form onSubmit={submitHandler}>
+               <form onSubmit={submitHandler }>
                     <ul className="form-container">
                         <li>
                             <h2 className="text-center">Sign In</h2>

@@ -40,7 +40,7 @@ function ProfileScreen(props) {
 
   return <div className="profile">
     <div className="profile-info">
-      <div className="form">
+      <div className="form form-profile">
         <form onSubmit={submitHandler} >
           <ul className="form-container">
             <li>
