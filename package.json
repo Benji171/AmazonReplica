@@ -20,7 +20,6 @@
   "homepage": "https://github.com/Benji171/AmazonReplica#readme",
   "dependencies": {
     "@babel/register": "^7.10.1",
-    "babel-cli": "^6.26.0",
     "body-parser": "^1.19.0",
     "bootstrap": "^4.5.0",
     "dotenv": "^8.2.0",
@@ -33,7 +32,8 @@
     "save-dev": "0.0.1-security",
     "@babel/node": "^7.10.1",
     "@babel/cli": "^7.10.1",
-    "@babel/preset-env": "^7.10.2"
+    "@babel/preset-env": "^7.10.2",
+    "@babel/core": "^7.10.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.1",
