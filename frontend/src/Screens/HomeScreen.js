@@ -30,7 +30,6 @@ function HomeScreen (props) {
         setSortOrder(e.target.value);
         dispatch(listProducts(category, searchKeyword, sortOrder))
       }
-
     return <>
     {category &&
         <h2 className="category-header">{category}</h2>}

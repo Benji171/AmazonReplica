@@ -74,7 +74,6 @@ function CartScreen (props) {
                     )
                 }
             </ul>
-
         </div>
 
         <div className="cart-action">
