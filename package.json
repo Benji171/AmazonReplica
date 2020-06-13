@@ -41,8 +41,8 @@
     "@babel/node": "^7.10.1",
     "@babel/preset-env": "^7.10.2"
   },
-  "engines": { 
-    "node": "12.13.0", 
+  "engines": {
+    "node": "12.13.0",
     "npm": "6.12.0"
   }
 }
