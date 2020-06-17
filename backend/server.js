@@ -1,11 +1,11 @@
 import express from 'express';
 import config from './config';
 import mongoose from 'mongoose';
-import userRoute from './routes/userRoute';
-import bodyParser from 'body-parser';
 import productRoute from './routes/productRoute';
 import orderRoute from './routes/orderRoute';
 import path from 'path'
+import userRoute from './routes/userRoute';
+import bodyParser from 'body-parser';
 
 
 
@@ -15,7 +15,6 @@ mongoose.connect(mongodbUrl, {
     useUnifiedTopology: true,
     useCreateIndex: true
 }).catch(error => console.log(error.reason));
-
 
 
 const app = express();
@@ -28,6 +27,7 @@ app.use('/api/orders', orderRoute);
 app.get('/api/config/paypal', (req, res) => {
   res.send(config.PAYPAL_CLIENT_ID);
 });
+
 
 app.use(express.static(path.join(__dirname, '/../frontend/build')));
 app.get('*', (req, res) => {
